@@ -9,3 +9,6 @@ const moviesData = [
     {name: "Harry Potter and the Half-Blood Prince", synopsis: "Starts with the sixth year at Hogwarts and with terrible events that devastate England.Harry is elected captain of the Quidditch team, the training and the exams occupy almost of his time, but the peace of mind is short-lived. Despite the strict security controls that protect the school, two students are brutally attacked. Dumbledore knows that the moment, foretold by the Prophecy, is drawing near when Harry and Voldemort will face each other to the death.", year: 2009},
     {name: "Harry Potter and the Deathly Hallows - Part 1", synopsis: "It is a continuation of the previous 'The Half-Blood Prince'. And falls on Harry's shoulders an almost impossible mission:he must find and destroy the last horcruxes to end Lord Voldemort's reign. Harry embarks with his friends Hermione Granger and Ron Weasley on a dangerous journey through England to find the objects that contain the fragments of the Dark Lord's soul,", year: 2010},
 ]
+
+
+export default moviesData

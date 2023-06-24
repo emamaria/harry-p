@@ -1,6 +1,6 @@
 
 
-const authorData = {
+  const authorData = {
     name: "J.K.Rowling",
     description: `She was born in England in 31 July 1965. Rowling graduated from the
     University of Exeter in 1987 and began working temp jobs as a bilingual
@@ -10,3 +10,5 @@ const authorData = {
     experiencing relative poverty as a single parent. Forbes named her
     the world's highest-paid author in 2008, 2017 and 2019.`
 }
+
+export default authorData;

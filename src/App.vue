@@ -1,11 +1,11 @@
 <script setup>
-import Character from '@/components/Character.vue'
+import Home from './pages/Home.vue'
 
 </script>
 
 <template>
   
-<Character/>
+<Home/>
   
 </template>
 

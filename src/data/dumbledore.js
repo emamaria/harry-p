@@ -9,3 +9,6 @@ what may be coming in his life. He allows Harry to get into what he
 wouldn't allow another pupil to do, and he also unwillingly permits Harry
 to confront things he’d rather protect him from.`
 }
+
+
+export default dumbledoreData;

@@ -8,3 +8,6 @@ muggle persecution.Hogwarts educated most wizarding children in the
 United Kingdom and its surrounding areas, keeping its location hidden from
 other wizarding schools and muggles.
 `
+
+
+export default hogwartsData;
