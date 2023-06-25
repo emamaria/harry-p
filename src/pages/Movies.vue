@@ -1,6 +1,8 @@
 <template>
+  <main>
   <h1>movies</h1>
   <Navbar/>
+  </main>
 </template>
 
 <script>
@@ -19,5 +21,11 @@ export default {
 
 h1{
     color: white;
+}
+
+main{
+   display: flex;
+   flex-direction: column;
+    min-height: 100vh;
 }
 </style>

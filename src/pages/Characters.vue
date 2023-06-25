@@ -1,6 +1,9 @@
 <template>
-  <h1>characters</h1>
+<main>
+ <h1>characters</h1>
   <Navbar/>
+</main>
+ 
 </template>
 
 <script>
@@ -16,5 +19,11 @@ export default {
 <style scoped>
 h1{
     color: white;
+}
+
+main{
+     display: flex;
+     flex-direction: column;
+     min-height: 100vh;
 }
 </style>
