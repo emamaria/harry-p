@@ -8,8 +8,6 @@
  
 </header>
  
-
-  
   <section class="hogwarts_about">
   <img src="../assets/hogwarts.jpg" alt="hogwarts">
  <h3>{{hogwarts}}</h3>
@@ -88,7 +86,7 @@ nav a{
 h1{
   font-size: 5rem;
    margin: 2rem;
-
+color:#a6332e;
 }
 
 
