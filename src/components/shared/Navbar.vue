@@ -46,7 +46,7 @@ nav a{
 }
 
 .is-active{
-    color: yellow;
+    color: #F5C518;
 }
 .not-active {
     color: #c6c5c5;
