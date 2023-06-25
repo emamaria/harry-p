@@ -33,7 +33,7 @@ h1{
   font-size: 6rem;
    margin: 1.7rem;
 color:#a6332e;
-
+/* text-shadow: white 1px 1px; */
 }
 
 h2{

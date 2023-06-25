@@ -84,7 +84,7 @@ section{
 .hogwarts_about img{
 
    margin-bottom: 30px;
-  
+ 
 }
 
 .hogwarts_about{
