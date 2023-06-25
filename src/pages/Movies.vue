@@ -1,7 +1,8 @@
 <template>
   <main>
-  <h1>movies</h1>
-  <Navbar/>
+ 
+  <Header :title="title"/>
+  
   </main>
 </template>
 
@@ -10,18 +11,21 @@
 import { defineAsyncComponent } from 'vue'
 
 export default {
-
+    props:{
+     title:{
+      type: String,
+      required: true
+     } 
+    },
     components:{
-      Navbar: defineAsyncComponent(() => import('../components/shared/Navbar.vue'))
+    Header: defineAsyncComponent(() => import('../components/shared/Header.vue'))
     }
 }
 </script>
 
 <style scoped>
 
-h1{
-    color: white;
-}
+
 
 main{
    display: flex;

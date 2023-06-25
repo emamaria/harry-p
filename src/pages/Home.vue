@@ -1,10 +1,6 @@
 <template>
 <main>
-  <header>
-  <h1>Harry Potter</h1>
-  <Navbar class="nav"/>
- 
-</header>
+   <Header :title="title"/>
  
   <section class="hogwarts_about">
   <img src="../assets/hogwarts.jpg" alt="hogwarts">
@@ -35,7 +31,7 @@
 import author from '../data/author'
 import dumbledore from '../data/dumbledore'
 import hogwarts from '../data/hogwarts'
-import Navbar from '../components/shared/Navbar.vue';
+import Header from '../components/shared/Header.vue'
 
 
 export default {
@@ -46,36 +42,17 @@ export default {
       return{
         author,
         dumbledore,
-        hogwarts
+        hogwarts,
+        title: "Harry Potter"
       }
     },
     components: {
-      Navbar,
-    
+      Header
     }
 }
 </script>
 
 <style scoped>
-
-header{
-  height: 40vh;
-  position: relative;
- 
-}
-
-.nav{
-margin: 2rem;
-position: absolute;
-right: 3rem;
-}
-
-
-h1{
-  font-size: 5rem;
-   margin: 2rem;
-color:#a6332e;
-}
 
 
 
