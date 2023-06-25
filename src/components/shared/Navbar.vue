@@ -24,9 +24,8 @@ export default {
 
 nav{
 
-height: 5vh;
 display: flex;
-
+ 
 
 }
 
@@ -38,7 +37,7 @@ nav li{
    align-items: center;
    justify-content: center;
    padding: 20px;
-  
+ 
 }
 nav a{
   text-decoration: none;
