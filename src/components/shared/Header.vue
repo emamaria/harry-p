@@ -40,7 +40,7 @@ h2{
   font-size: 5rem;
    margin: 1.7rem;
 color:#a6332e;
-
+ text-align: center;
 }
 
 header{

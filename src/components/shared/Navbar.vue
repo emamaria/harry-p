@@ -39,6 +39,7 @@ nav li{
    padding: 20px;
  
 }
+
 nav a{
   text-decoration: none;
   color: white;
