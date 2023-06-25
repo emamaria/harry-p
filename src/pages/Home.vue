@@ -1,10 +1,7 @@
 <template>
 <header>
   <h1>Harry Potter</h1>
-   <nav>  
-  <li><a href="">Characters</a></li>
-  <li><a href="">Movies</a></li>
-  </nav>
+  <Navbar class="nav"/>
  
 </header>
  
@@ -38,7 +35,11 @@
 import author from '../data/author'
 import dumbledore from '../data/dumbledore'
 import hogwarts from '../data/hogwarts'
+import Navbar from '../components/shared/Navbar.vue';
+
 export default {
+
+
 
     data(){
       return{
@@ -46,6 +47,9 @@ export default {
         dumbledore,
         hogwarts
       }
+    },
+    components: {
+      Navbar
     }
 }
 </script>
@@ -58,30 +62,12 @@ header{
  
 }
 
-nav{
-
-height: 5vh;
-display: flex;
+.nav{
 margin: 2rem;
 position: absolute;
 right: 3rem;
-
 }
 
-nav li{
-  list-style-type: none;
-  margin: 3px;
-  background-color:#a6332e;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   padding: 20px;
-  
-}
-nav a{
-  text-decoration: none;
-  color: white;
-}
 
 h1{
   font-size: 5rem;
@@ -146,4 +132,7 @@ footer{
   height: 13vh;
   background-color: #3c4e91;
 }
+
+
+
 </style>

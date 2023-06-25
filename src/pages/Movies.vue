@@ -1,10 +1,17 @@
 <template>
   <h1>movies</h1>
+  <Navbar/>
 </template>
 
 <script>
+
+import { defineAsyncComponent } from 'vue'
+
 export default {
 
+    components:{
+      Navbar: defineAsyncComponent(() => import('../components/shared/Navbar.vue'))
+    }
 }
 </script>
 

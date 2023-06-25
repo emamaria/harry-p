@@ -1,10 +1,15 @@
 <template>
   <h1>characters</h1>
+  <Navbar/>
 </template>
 
 <script>
-export default {
+import { defineAsyncComponent } from 'vue'
 
+export default {
+    components:{
+      Navbar: defineAsyncComponent(() => import('../components/shared/Navbar.vue'))
+    }
 }
 </script>
 
