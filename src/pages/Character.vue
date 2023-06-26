@@ -1,13 +1,13 @@
 <template>
 <main>
- <p>{{name}}</p>
+ <p v-if="characterData">{{characterData.name}}</p>
 </main>
  
 </template>
 
 <script>
 
-// import {getApiData} from '../api/getApiData'
+import {getApiData} from '../api/getApiData'
 
 export default {
 
@@ -17,14 +17,40 @@ export default {
         type: String
       }
    },
-//    data(){
-//      return{
-//         charactersList: []
-//      }
-//    },
-//    created(){
-//      this.charactersList =  getApiData()
-//       }
+   data(){
+     return{
+        characterData: null
+     }
+   },
+   async created(){
+     let charactersArray = await getApiData()
+
+       this.characterData = charactersArray.slice(0,25).filter(character => character.id === this.id)
+                                          .map( data => {
+           const {id, name,species, gender, house, dateOfBirth,yearOfBirth, wizard, ancestry, eyeColour, hairColour,wand, patronus,hogwartsStudent, hogwartsStaff, actor,alive,image} = data
+                      return {
+                       id,
+                       name,
+                       species,
+                       gender,
+                       house,
+                       dateOfBirth,yearOfBirth,
+                       wizard,
+                       ancestry,
+                       eyeColour,
+                       hairColour,
+                       wand,
+                       patronus,
+                       hogwartsStudent, 
+                       hogwartsStaff,
+                       actor,
+                       alive,
+                       image
+                       }
+                    })[0]
+
+                    console.log("dato personaje", this.characterData)
+      }
 }
 </script>
 

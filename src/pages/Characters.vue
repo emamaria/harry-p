@@ -25,7 +25,7 @@ export default {
     },
     data(){
       return{
-        names: ["ron", "hermione"] ,
+    
          charactersList: []
       }
     },
@@ -33,31 +33,12 @@ export default {
 
       try{
       let data =  await getApiData()
-      
-      this.charactersList = data.slice(0, 100).map( data => {
-          const {id, name,species, gender, house, dateOfBirth,yearOfBirth, wizard, ancestry, eyeColour, hairColour,wand, patronus,hogwartsStudent, hogwartsStaff, actor,alive,image} = data
-                      return {
-                       id,
-                       name,
-                       species,
-                       gender,
-                       house,
-                       dateOfBirth,yearOfBirth,
-                       wizard,
-                       ancestry,
-                       eyeColour,
-                       hairColour,
-                       wand,
-                       patronus,
-                       hogwartsStudent, 
-                       hogwartsStaff,
-                       actor,
-                       alive,
-                       image
-                       }
-                    })
+      console.log("mi data", data)
+      this.charactersList = data.slice(0, 25).map( data => {
+          const {id, name,image} = data
+             return {id,name,image }
+          })
 
-          console.log("lista mapeada",this.charactersList)
       }catch(err){
                 console.log(err)
       }
