@@ -1,13 +1,16 @@
 <template>
 <main>
  <Header :title="title"/>
-
+<Character @click="goToCharacterPage(name)" v-for="(name, index) in names" :key="index" :name="name"/>
 </main>
  
 </template>
 
 <script>
 import { defineAsyncComponent } from 'vue'
+
+
+
 
 export default {
     props:{
@@ -17,7 +20,19 @@ export default {
      } 
     },
     components:{
-      Header: defineAsyncComponent(() => import('../components/shared/Header.vue'))
+      Header: defineAsyncComponent(() => import('../components/shared/Header.vue')),
+      Character: defineAsyncComponent(() => import('../components/Character.vue'))
+    },
+    data(){
+      return{
+        names: ["ron", "hermione"] 
+      }
+    },
+    methods: {
+        goToCharacterPage(name){
+          console.log(name)
+          this.$router.push(`characters/${name}`)
+        }
     }
 }
 </script>

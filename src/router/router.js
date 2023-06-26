@@ -24,11 +24,21 @@ const routes = [
      props: (route) => {
       const {name} = route
       return {title: name.charAt(0).toUpperCase() + name.slice(1)}
-   }  
+     }
     },
     { path: '/:pathMatch(.*)*',
       redirect: {name: 'home'}
     },
+    {
+      path: '/characters/:name',
+      name: 'character',
+      component: () => import( /* webpackChunkName: "character" */ '../pages/Character.vue') ,
+      props:(route) => {
+         const {name} = route.params
+         console.log(name)
+         return {name}
+      }
+   }
 
 ]
 
