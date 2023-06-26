@@ -6,14 +6,25 @@
 </template>
 
 <script>
+
+// import {getApiData} from '../api/getApiData'
+
 export default {
 
    props: {
-      name:{
+      id:{
         required: true,
         type: String
       }
-   }
+   },
+//    data(){
+//      return{
+//         charactersList: []
+//      }
+//    },
+//    created(){
+//      this.charactersList =  getApiData()
+//       }
 }
 </script>
 

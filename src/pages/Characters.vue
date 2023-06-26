@@ -1,14 +1,14 @@
 <template>
 <main>
  <Header :title="title"/>
-<Character @click="goToCharacterPage(name)" v-for="(name, index) in names" :key="index" :name="name"/>
+<Character @click="goToCharacterPage(character.id)" v-for="character in charactersList" :key="character.id" :name="character.name" :image="character.image"/>
 </main>
  
 </template>
 
 <script>
 import { defineAsyncComponent } from 'vue'
-
+import {getApiData} from '../api/getApiData'
 
 
 
@@ -25,13 +25,48 @@ export default {
     },
     data(){
       return{
-        names: ["ron", "hermione"] 
+        names: ["ron", "hermione"] ,
+         charactersList: []
       }
     },
+    async created(){
+
+      try{
+      let data =  await getApiData()
+      
+      this.charactersList = data.slice(0, 100).map( data => {
+          const {id, name,species, gender, house, dateOfBirth,yearOfBirth, wizard, ancestry, eyeColour, hairColour,wand, patronus,hogwartsStudent, hogwartsStaff, actor,alive,image} = data
+                      return {
+                       id,
+                       name,
+                       species,
+                       gender,
+                       house,
+                       dateOfBirth,yearOfBirth,
+                       wizard,
+                       ancestry,
+                       eyeColour,
+                       hairColour,
+                       wand,
+                       patronus,
+                       hogwartsStudent, 
+                       hogwartsStaff,
+                       actor,
+                       alive,
+                       image
+                       }
+                    })
+
+          console.log("lista mapeada",this.charactersList)
+      }catch(err){
+                console.log(err)
+      }
+   
+      },
     methods: {
-        goToCharacterPage(name){
-          console.log(name)
-          this.$router.push(`characters/${name}`)
+        goToCharacterPage(id){
+          console.log(id)
+          this.$router.push(`characters/${id}`)
         }
     }
 }

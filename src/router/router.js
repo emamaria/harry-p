@@ -30,13 +30,13 @@ const routes = [
       redirect: {name: 'home'}
     },
     {
-      path: '/characters/:name',
+      path: '/characters/:id',
       name: 'character',
       component: () => import( /* webpackChunkName: "character" */ '../pages/Character.vue') ,
       props:(route) => {
-         const {name} = route.params
-         console.log(name)
-         return {name}
+         const {id} = route.params
+         console.log(id)
+         return {id}
       }
    }
 

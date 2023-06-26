@@ -1,6 +1,7 @@
 <template>
   <div>
      <p>{{name}}</p>
+     <img :src="image" :alt="name">
   </div>
  
 </template>
@@ -12,21 +13,28 @@ export default {
     name:{
       required: true,
       type: String
+    },
+   
+    image:{
+      
+      type: String
     }
    }
 }
 </script>
 
 <style scoped>
-  p{
-    padding: 1rem;
-  }
+ 
   div{
-    width: 30rem;
+   
     background-color: rebeccapurple;
-    height: 20vh;
+    width: 300px;
     margin: 2rem;
   }
+
+ img{
+  width: 300px;
+ }
 
 
 </style>
