@@ -47,6 +47,12 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+   
+  }
+
+  div:hover{
+    opacity: 0.6;
+    cursor: pointer;
   }
 
  img{
