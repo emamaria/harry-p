@@ -1,7 +1,7 @@
 <template>
 <main>
  <Header :title="title"/>
-<Character @click="goToCharacterPage(character.id)" v-for="character in charactersList" :key="character.id" :name="character.name" :image="character.image"/>
+<Character @click="goToCharacterPage(character.id)" v-for="character in charactersList" :key="character.id" :name="character.name" :image="character.image"  :color="character.color"/>
 </main>
  
 </template>
@@ -35,8 +35,31 @@ export default {
       let data =  await getApiData()
       console.log("mi data", data)
       this.charactersList = data.slice(0, 25).map( data => {
-          const {id, name,image} = data
-             return {id,name,image }
+          const {id, name,image, house} = data
+
+          let characterHouse = house.toLowerCase()
+          let color = ""
+
+          switch(characterHouse){
+
+            case "gryffindor":
+              color = "red"
+              break;
+            case "ravenclaw":
+              color = "green"
+              break;
+            case "hufflepuff":
+              color = "yellow"
+              break;
+            case "Slytherin":
+              color = "blue"
+              break;
+            default:
+              color = "black"
+              break
+          }
+
+             return {id,name,image,color}
           })
 
       }catch(err){

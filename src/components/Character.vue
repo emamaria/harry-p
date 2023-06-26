@@ -1,6 +1,6 @@
 <template>
   <div>
-     <p>{{name}}</p>
+     <p>{{name}}{{color}}</p>
      <img :src="image" :alt="name">
   </div>
  
@@ -18,6 +18,10 @@ export default {
     image:{
       
       type: String
+    },
+    color: {
+      type: String,
+      required: true
     }
    }
 }
