@@ -1,7 +1,10 @@
 <template>
 <main>
  <Header :title="title"/>
-<Character @click="goToCharacterPage(character.id)" v-for="character in charactersList" :key="character.id" :name="character.name" :image="character.image"  :color="character.color"/>
+ <div class="character_container">
+  <Character @click="goToCharacterPage(character.id)" v-for="character in charactersList" :key="character.id" :name="character.name" :image="character.image"  :color="character.color"/>
+ </div>
+
 </main>
  
 </template>
@@ -51,7 +54,7 @@ export default {
             case "hufflepuff":
               color = "yellow"
               break;
-            case "Slytherin":
+            case "slytherin":
               color = "blue"
               break;
             default:
@@ -82,7 +85,15 @@ export default {
 
 main{
  display: flex;
-     flex-direction: column;
-     min-height: 100vh;    
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+.character_container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+ 
 }
 </style>

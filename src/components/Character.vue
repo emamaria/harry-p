@@ -1,6 +1,8 @@
 <template>
-  <div>
-     <p>{{name}}{{color}}</p>
+  <div :class="color">
+     <header >
+      {{name}}
+     </header>
      <img :src="image" :alt="name">
   </div>
  
@@ -29,16 +31,46 @@ export default {
 
 <style scoped>
  
+ header{
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+ }
   div{
+    border: 2px solid #c17b00;
    
-    background-color: rebeccapurple;
-    width: 300px;
+    width: 250px;
     margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
  img{
-  width: 300px;
+  object-fit: cover;
+  width: 100%;
+  border-top: 2px solid #c17b00;
+  height: 320px;
  }
+
+ .red{
+    background-color:#a6332e;
+  }
+
+  .blue{
+    background-color: #3c4e91;
+  }
+
+  .green{
+   background-color:#366447;
+  }
+
+  .yellow{
+    background-color:#efbc2f;
+  }
 
 
 </style>
