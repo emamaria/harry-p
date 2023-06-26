@@ -12,7 +12,7 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import {getApiData} from '../api/getApiData'
-
+import {getCharacterColor} from '../helpers/getCharacterColor'
 
 
 export default {
@@ -41,27 +41,10 @@ export default {
           const {id, name,image, house} = data
 
           let characterHouse = house.toLowerCase()
-          let color = ""
 
-          switch(characterHouse){
 
-            case "gryffindor":
-              color = "red"
-              break;
-            case "ravenclaw":
-              color = "green"
-              break;
-            case "hufflepuff":
-              color = "yellow"
-              break;
-            case "slytherin":
-              color = "blue"
-              break;
-            default:
-              color = "black"
-              break
-          }
-
+          let color =  getCharacterColor(characterHouse)
+         
              return {id,name,image,color}
           })
 
