@@ -1,7 +1,9 @@
 <template>
+
 <main>
  <Header :title="title"/>
- <div class="character_container">
+ <p class="loading" v-if="charactersList.length === 0">Loading...</p>
+ <div  v-else class="character_container">
   <Character @click="goToCharacterPage(character.id)" v-for="character in charactersList" :key="character.id" :name="character.name" :image="character.image"  :color="character.color"/>
  </div>
 
@@ -64,7 +66,12 @@ export default {
 
 <style scoped>
 
-
+.loading{
+  text-align: center;
+  font-size: 1.7rem;
+  color: #c17b00;
+  margin-top: 5rem;
+}
 
 main{
  display: flex;
