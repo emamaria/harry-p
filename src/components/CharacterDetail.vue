@@ -1,7 +1,7 @@
 <template>
-  
+
   <main>
- 
+
     <div class="img_data_container"   :class="charData.color"  >
       
     <img :src="charData.image" :alt="charData.name"> 

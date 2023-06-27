@@ -1,8 +1,12 @@
 <template>
 <main>
+  
   <div v-if="characterData"  class="character_detail_container">
+    
     <h3>{{characterData.name}}</h3>
+      <router-link class="back_link" :class="characterData.color" :to="{name: 'characters'}">←</router-link>
      <CharacterDetail  :char-data="characterData"/>
+     
   </div>
 
 </main>
@@ -74,6 +78,23 @@ main{
      flex-direction: column;
      min-height: 100vh;    
 }
+
+.back_link{
+  margin: 2rem;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #c17b00;
+  font-weight: bold;
+   transition: .2s;
+   width: 50px;
+   border: 2px solid #c17b00;
+   text-align: center;
+
+  }
+
+ .back_link:hover{
+   transform: scale(1.2);
+ }
 
 .character_detail_container{
   display: flex;
