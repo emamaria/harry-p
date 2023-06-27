@@ -75,7 +75,7 @@ export default {
     min-width:300px;
     margin: 100px 50px 200px 50px;
     justify-content: center;
-    border: 3px solid #c17b00;
+   
    }
 
  .under_img_data_container{
@@ -91,6 +91,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+   border: 3px solid #c17b00;
  }
 
  img{
@@ -104,7 +105,7 @@ export default {
     flex-direction: column;
     width: 300px;
     padding: 2rem;
-   
+    border: 3px solid #c17b00;
  }
 
  .red{
@@ -121,6 +122,21 @@ export default {
 
   .yellow{
     background-color:#efbc2f;
+  }
+
+  @media screen and (max-width:600px){
+
+   #first_p{
+   margin-top: 0px;
+ }
+
+ .under_img_data_container, 
+ .img_data_container,
+  .character_data_container{
+    padding: 0.8rem;
+  }
+
+
   }
 
  
