@@ -36,7 +36,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  font-size: 1.3rem;
  }
   div{
     border: 2px solid #c17b00;

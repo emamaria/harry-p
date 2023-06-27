@@ -56,7 +56,7 @@ export default {
  p, li{
     margin: 3px;
     list-style-type:none;
-   
+   font-size: 1.3rem
  }
 
  #first_p{

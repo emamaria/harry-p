@@ -76,6 +76,7 @@ section{
   display: flex;
   flex-direction: column;
   padding: 30px;
+  
 }
 
 
@@ -83,13 +84,16 @@ section{
 
 .hogwarts_about img{
 
-   margin-bottom: 30px;
+   margin-bottom: 50px;
  
 }
 
 .hogwarts_about{
  display: flex;
+ margin-bottom: 20px;
 }
+
+
 
 
 .rowling_about, .dumbledore_about{
@@ -98,9 +102,10 @@ section{
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
- 
+
  
 }
+
 
 .yellow{
   background-color:#efbc2f;
@@ -111,7 +116,7 @@ main{
    display: flex;
      flex-direction: column;
      min-height: 100vh;
-     
+     margin-bottom: 50px;
 }
 
 

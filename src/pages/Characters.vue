@@ -77,6 +77,7 @@ main{
  display: flex;
   flex-direction: column;
   min-height: 100vh; 
+   margin-bottom: 100px;
 }
 
 .character_container{

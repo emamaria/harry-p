@@ -43,6 +43,7 @@ nav li{
 nav a{
   text-decoration: none;
   color: white;
+  font-size: 1.2rem;
 }
 
 .is-active{

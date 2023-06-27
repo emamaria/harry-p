@@ -45,7 +45,10 @@ export default {
   header, main{
      border: 1.5px solid #c17b00;
      padding: 0.8rem;
+      font-size: 1.3rem
   }
+
+ 
 
   .red{
     background-color:#a6332e;
