@@ -84,7 +84,9 @@ main{
 }
 
 h3{
-  margin-top: 3rem;
+  margin-top: 4rem;
+  font-size: 2rem;
+  color: #c17b00;
 }
 
 .red{

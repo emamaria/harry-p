@@ -75,7 +75,7 @@ export default {
     min-width:300px;
     margin: 100px 50px 200px 50px;
     justify-content: center;
-  
+    border: 3px solid #c17b00;
    }
 
  .under_img_data_container{
