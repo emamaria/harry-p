@@ -1,8 +1,8 @@
 <template>
 <main>
-  <div class="character_detail_container">
+  <div v-if="characterData"  class="character_detail_container">
     <h3>{{characterData.name}}</h3>
-     <CharacterDetail v-if="characterData"  :char-data="characterData"/>
+     <CharacterDetail  :char-data="characterData"/>
   </div>
 
 </main>
