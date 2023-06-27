@@ -1,7 +1,8 @@
 <template>
 <main>
+  <p class="loading" v-if="!characterData">Loading...</p>
   
-  <div v-if="characterData"  class="character_detail_container">
+  <div v-else class="character_detail_container">
     
     <h3>{{characterData.name}}</h3>
       <router-link class="back_link" :class="characterData.color" :to="{name: 'characters'}">←</router-link>
@@ -125,6 +126,14 @@ h3{
   .yellow{
     background-color:#efbc2f;
   }
+
+  .loading{
+  text-align: center;
+  font-size: 1.7rem;
+  color: #c17b00;
+  margin-top: 15rem;
+}
+
 
 
 </style>
