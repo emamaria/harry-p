@@ -124,7 +124,7 @@ export default {
     background-color:#efbc2f;
   }
 
-  @media screen and (max-width:600px){
+  @media screen and (max-width:900px){
 
    #first_p{
    margin-top: 0px;
