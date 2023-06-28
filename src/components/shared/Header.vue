@@ -33,7 +33,7 @@ h1{
   font-size: 5.3rem;
 margin: 40px;
 color:#a6332e;
-/* text-shadow: white 1px 1px; */
+padding: 3rem;
 }
 
 h2{
@@ -41,12 +41,13 @@ h2{
  color:#a6332e;
  margin-top: 50px;
  text-align: center;
+ padding: 3rem;
 }
 
 header{
-  height: 40vh;
+  height: 50vh;
   position: relative;
- 
+  margin-bottom: 60px;
  
 }
 .nav{
@@ -69,7 +70,7 @@ right: 3rem;
 .nav{
 
 position: absolute;
-top: 180px;
+top: 300px;
 left: 0;
 right: 0;
 margin: 0 auto;
