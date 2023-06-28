@@ -44,6 +44,7 @@ main{
    flex-direction: column;
     min-height: 100vh;
      margin-bottom: 100px;
+    padding: 30px;
 }
 
 
