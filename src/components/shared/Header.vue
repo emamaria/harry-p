@@ -56,7 +56,7 @@ header{
   height: 45vh;
   display: flex;
   flex-direction: column;
- 
+  margin-bottom: 100px;
 }
 .nav{
 margin: 4rem;
