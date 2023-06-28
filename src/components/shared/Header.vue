@@ -1,9 +1,12 @@
 <template>
  <header>
-  <h1 v-if="title === harry">{{title}}</h1>
-  <h2 v-else>{{title}}</h2>
-  <Navbar class="nav"/>
- 
+  <div class="titles_container">
+   <h1 v-if="title === harry">{{title}}</h1>
+   <h2 v-else>{{title}}</h2>
+  </div> 
+  <div class="nav_container">
+     <Navbar class="nav"/>
+  </div>
 </header>
 </template>
 
@@ -31,49 +34,52 @@ export default {
 
 h1{
   font-size: 5.3rem;
-margin: 40px;
+margin-top: 30px;
 color:#a6332e;
-padding: 3rem;
+padding: 2rem;
 }
 
 h2{
+  margin-top: 30px;
  font-size: 4.3rem;
  color:#a6332e;
- margin-top: 50px;
  text-align: center;
- padding: 3rem;
+ padding: 2rem;
+}
+
+.nav_container{
+  display: flex;
+  justify-content: end;
 }
 
 header{
-  height: 50vh;
-  position: relative;
-  margin-bottom: 60px;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
  
 }
 .nav{
-margin: 2rem;
-position: absolute;
-right: 3rem;
+margin: 4rem;
+
 }
 
 @media screen and (max-width:900px){
   h1{
     font-size: 3.5rem;
-    text-align: center;
+    text-align: center  ;
   }
 
    h2{
     font-size: 3rem;
-    text-align: center;
+   
   }
+
+.nav_container{
+  justify-content: center;
+}
 
 .nav{
 
-position: absolute;
-top: 300px;
-left: 0;
-right: 0;
-margin: 0 auto;
 display: flex;
 justify-content: center;
 

@@ -119,7 +119,11 @@ main{
      margin-bottom: 50px;
 }
 
-
+@media screen and (max-width:900px){
+  section{
+     font-size: 1.2rem;
+  }
+}
 
 
 </style>
