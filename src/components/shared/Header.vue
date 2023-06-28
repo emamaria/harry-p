@@ -57,6 +57,7 @@ header{
   display: flex;
   flex-direction: column;
   margin-bottom: 100px;
+
 }
 .nav{
 margin: 4rem;
@@ -82,6 +83,15 @@ margin: 4rem;
 
 display: flex;
 justify-content: center;
+
+}
+}
+
+
+@media screen and (max-width:300px){
+ header{
+ 
+  margin-bottom: 30px;
 
 }
 }
