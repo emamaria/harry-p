@@ -134,7 +134,14 @@ export default {
  .img_data_container,
   .character_data_container{
     padding: 0.8rem;
+    width: 260px;
   }
+
+   img{
+    object-fit: contain;
+    width: 250px;
+    height: 330px;
+ }
 
 
   }
