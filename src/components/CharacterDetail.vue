@@ -72,7 +72,7 @@ export default {
     display: flex;
     flex-direction: row;
     flex-wrap:wrap;
-    min-width:300px;
+    min-width:270px;
     margin: 100px 50px 200px 50px;
     justify-content: center;
    
