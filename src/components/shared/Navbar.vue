@@ -53,4 +53,13 @@ nav a{
     color: #c6c5c5;
 }
 
+ @media screen and (max-width:600px){
+
+   nav li{
+    padding: 10px
+   }
+
+
+ }
+
 </style>
