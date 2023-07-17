@@ -6,34 +6,34 @@
       
     <img :src="charData.image" :alt="charData.name"> 
     <div class="under_img_data_container">
-     <p>Actor:&nbsp;{{charData.actor}}</p>  
-     <p>Gender: &nbsp;{{charData.gender}}</p>
-     <p>Date of Birth:&nbsp;{{charData.dateOfBirth}}</p>
-     <p>Year of Birth:&nbsp;{{charData.yearOfBirth}}</p>
-      <p>Eye Colour:&nbsp; {{charData.eyeColour}}</p>
-     <p>Hair Colour:&nbsp;{{charData.hairColour}}</p>
+     <p v-show="charData.actor">Actor:&nbsp;{{charData.actor}}</p>  
+     <p v-show="charData.gender">Gender: &nbsp;{{charData.gender}}</p>
+     <p v-show="charData.dateOfBirth">Date of Birth:&nbsp;{{charData.dateOfBirth}}</p>
+     <p v-show="charData.yearOfBirth">Year of Birth:&nbsp;{{charData.yearOfBirth}}</p>
+     <p v-show="charData.eyeColour">Eye Colour:&nbsp; {{charData.eyeColour}}</p>
+     <p v-show="charData.hairColour">Hair Colour:&nbsp;{{charData.hairColour}}</p>
      </div>
     </div>
 
     <div class="character_data_container"  :class="charData.color">
      
-    <p id="first_p">Species: &nbsp;{{charData.species}}</p>
+    <p v-show="charData.species" id="first_p">Species: &nbsp;{{charData.species}}</p>
    
-    <p>House:&nbsp;{{charData.house}}</p>
+    <p v-show="charData.house" >House:&nbsp;{{charData.house}}</p>
      
-     <p>Wizard:&nbsp;{{charData.wizard}}</p>
-     <p>Ancestry: &nbsp;{{charData.ancestry}}</p>
+     <p v-show="charData.wizard">Wizard:&nbsp;{{charData.wizard}}</p>
+     <p v-show="charData.ancestry">Ancestry: &nbsp;{{charData.ancestry}}</p>
     
-     <p>Patronus:&nbsp;{{charData.patronus}}</p>
-     <p>Hogwarts Student:&nbsp;{{charData.hogwartsStudent}}</p>
-     <p>Hogwarts Staff:&nbsp; {{charData.hogwartsStaff}}</p>
+     <p v-show="charData.patronus">Patronus:&nbsp;{{charData.patronus}}</p>
+     <p v-show="charData.hogwartsStudent">Hogwarts Student:&nbsp;{{charData.hogwartsStudent}}</p>
+     <p v-show="charData.hogwartsStaff">Hogwarts Staff:&nbsp; {{charData.hogwartsStaff}}</p>
      
-     <p>Alive:&nbsp;{{charData.alive}}</p>
+     <p v-show="charData.alive">Alive:&nbsp;{{charData.alive}}</p>
      <ul>
-        <h4>Wand:</h4>
-        <li>Wood:&nbsp;{{charData.wand.wood}} </li>
-        <li>Core:&nbsp;{{charData.wand.core}} </li>
-        <li>Length:&nbsp;{{charData.wand.length}}</li>
+        <h4 v-show="charData.wand.wood || charData.wand.core || charData.wand.length">Wand:</h4>
+        <li v-show="charData.wand.wood">Wood:&nbsp;{{charData.wand.wood}} </li>
+        <li v-show="charData.wand.core">Core:&nbsp;{{charData.wand.core}} </li>
+        <li v-show="charData.wand.length">Length:&nbsp;{{charData.wand.length}}</li>
      </ul>
     </div>
    
